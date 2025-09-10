@@ -421,7 +421,7 @@ setWebGLAvailable(checkWebGL());
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
       {/* 3D Canvas Background */}
       <div className="absolute inset-0 z-0 md:z-30">
         {webGLAvailable ? (

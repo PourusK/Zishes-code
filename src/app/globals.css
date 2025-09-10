@@ -17,7 +17,7 @@ html{
   scroll-behavior: smooth;
 
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 /* Add to your globals.css */

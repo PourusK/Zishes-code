@@ -9,7 +9,7 @@ import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials
 
 export default function Home() {
   return (
-    <main className="scroll-smooth">
+    <main className="scroll-smooth overflow-x-hidden">
       <section id="home">
         <HeroSection />
       </section>

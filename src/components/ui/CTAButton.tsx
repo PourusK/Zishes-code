@@ -32,14 +32,14 @@ export default function CTAButton() {
         delay: isInitialLoad ? 3 : 0,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className="scroll-smooth md:w-[60%]  w-[80%]  mx-auto h-[65px] px-6 mt-5 rounded-full 
+      className="scroll-smooth md:w-[60%]  w-[80%]  mx-auto h-[65px] px-6  rounded-full 
                  bg-transparent border border-neutral-800 fixed top-4 left-1/2 
                  -translate-x-1/2 z-50 backdrop-blur-lg flex items-center justify-between"
     >
       {/* === Logo === */}
       <Link
         href="#home"
-        className="relative h-[80px] w-[80px] md:h-[70px] md:w-[100px]"
+        className="relative h-[70px] w-[70px] md:h-[70px] md:w-[70px]"
       >
         <Image src="/img/logo.png" alt="App Logo" fill className="object-cover overflow-visible" />
       </Link>
@@ -97,7 +97,7 @@ export default function CTAButton() {
 
       {/* === Mobile Dropdown === */}
       {isOpen && (
-        <div className="absolute top-full mt-3 left-0 w-full rounded-lg bg-neutral-900 border border-neutral-800 flex flex-col items-center py-4">
+        <div className="absolute top-full mt-3 left-0 w-full rounded-lg bg-black  border border-neutral-800 flex flex-col items-center py-4 ">
           {navItems.map((item) => (
             <Link
               key={item.title}
