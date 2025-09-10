@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --breakpoint-3xl: 1700px;
+}
+body.loading-screen-active {
+  overflow: hidden;
+  touch-action: none;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+
+}
+
+html{
+  scroll-behavior: smooth;
+
+  body {
+    overflow: hidden;
+  }
+}
+/* Add to your globals.css */
+.animate-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+  /* Disable heavy effects on mobile */
+  .aurora-background * {
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+  
+  /* Simplify gradients */
+  .aurora-background [style*="--aurora"] {
+    background-image: linear-gradient(250deg, #1a1a1d 0%, #0a0808 30%, #2d2828 60%, #1f1c1c 80%, #B9935B 100%) !important;
+    background-size: 100% !important;
+  }
+  
+  /* Remove noise texture */
+  .aurora-background [class*="background-image"] {
+    display: none !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+}
+
+@font-face {
+  font-family: "Respira-Black";
+  src: url("/fonts/Respira-Black.otf") format("opentype");
+}
+
+.typeface-respira-black {
+  font-family: "Respira-Black", sans-serif;
+ 
+  font-style: normal;
+}
+
+::selection {
+  @apply bg-[#caf182];
+}
+
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+  will-change: transform, opacity, scale;
+  z-index: 1;
+}
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+   
+}
+
+::view-transition-new(root) {
+  z-index: 50 ;
+  animation: none !important;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none !important;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink-animation {
+  animation: blink 1s infinite;
+}
+
+#about p span {
+  @apply inline-block;
+}
+#about .word1 {
+  padding: 0 0 0 0.8em;
+  will-change: transform;
+}
+#about .word2 {
+  padding: 0 1.6em 0 0;
+  will-change: transform;
+}
+#about .word3 {
+  padding: 0 0 0 2.4em;
+  will-change: transform;
+}
+
+@keyframes aurora-particle {
+  0% {
+    transform: translate(calc(var(--mouse-x) * 0.1px), calc(var(--mouse-y) * 0.1px)) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(calc(var(--mouse-x) * 0.1px), calc(var(--mouse-y) * 0.1px)) translateY(-100vh) rotate(360deg);
+  }
+}
+
+.animate-aurora-wave {
+  animation: aurora-wave 15s ease infinite;
+}
+
+.animate-aurora-particle {
+  animation: aurora-particle 20s linear infinite;
+}
