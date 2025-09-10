@@ -19,8 +19,8 @@ const Footer = () => {
 
   const supportLinks = [
     { name: 'FAQs', href: '/faqs' },
-    { name: 'Report an Issue', href: '/report-issue' },
-    { name: 'Community/Feedback', href: '/community-feedback' }
+    { name: 'Contact Us', href: '/contact' },
+   
   ];
 
   return (

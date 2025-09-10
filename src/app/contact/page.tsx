@@ -1,25 +1,56 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
 
-const ReportIssue = () => {
-  const [form, setForm] = useState({ name: "", email: "", issue: "" });
+const Contact = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "Feedback",
+    message: "",
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Issue reported successfully! ✅");
-    setForm({ name: "", email: "", issue: "" });
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message,
+        },
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+      )
+      .then(
+        (response) => {
+          alert("Message sent successfully! ✅");
+          setForm({ name: "", email: "", subject: "Feedback", message: "" });
+          console.log("Email sent!", response.status, response.text);
+        },
+        (err) => {
+          alert("Oops! Something went wrong. ❌");
+          console.error(err);
+        }
+      );
   };
 
   return (
     <div className="relative bg-transparent min-h-screen py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-md shadow-xl rounded-2xl p-8 md:p-12">
         <h1 className="text-4xl font-extrabold text-white mb-6 border-b pb-4">
-          Report an Issue
+          Contact Us
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -29,6 +60,7 @@ const ReportIssue = () => {
             onChange={handleChange}
             placeholder="Your Name"
             className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+            required
           />
           <input
             type="email"
@@ -37,20 +69,32 @@ const ReportIssue = () => {
             onChange={handleChange}
             placeholder="Your Email"
             className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+            required
           />
-          <textarea
-            name="issue"
-            value={form.issue}
+          <select
+            name="subject"
+            value={form.subject}
             onChange={handleChange}
-            placeholder="Describe your issue..."
+            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+          >
+            <option value="Feedback">Feedback</option>
+            <option value="Report Issue">Report Issue</option>
+            <option value="Connect with Us">Connect with Us</option>
+          </select>
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Write your message..."
             rows={4}
             className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+            required
           ></textarea>
           <button
             type="submit"
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition"
           >
-            Submit
+            Send Message
           </button>
         </form>
         <div className="mt-10">
@@ -66,4 +110,4 @@ const ReportIssue = () => {
   );
 };
 
-export default ReportIssue;
+export default Contact;
