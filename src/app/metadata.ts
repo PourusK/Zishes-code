@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ap Agency | Web Developemnt ",
-  description: "Ap Agency",
+  title: " Zishes  ",
+  description: "",
 
   // Basic SEO
   keywords: [

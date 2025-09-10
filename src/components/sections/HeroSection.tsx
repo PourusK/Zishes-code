@@ -3,8 +3,9 @@ import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls, Html } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
+import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 
 
 interface TextPressureProps {
@@ -245,10 +246,10 @@ const Model3D: React.FC<{
   const [hovered, setHovered] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
   const animationProgress = useRef(0);
-  const [modelLoaded, setModelLoaded] = useState(false);
+  
 
   // Add type annotation for the GLTF result
-  const gltf = useLoader(GLTFLoader, modelPath) as any;
+  const gltf = useLoader(GLTFLoader, modelPath) as GLTF;
 
   // Rest of the component remains the same...
   useEffect(() => {
@@ -295,11 +296,7 @@ const Model3D: React.FC<{
       onPointerLeave={() => !isMobile && setHovered(false)}
     >
       <primitive object={gltf.scene} scale={scale} />
-      {!modelLoaded && (
-        <Html center>
-          {/* Loading indicator if needed */}
-        </Html>
-      )}
+     
     </group>
   );
 };
@@ -405,6 +402,7 @@ const checkWebGL = (): boolean => {
       (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
     );
   } catch (e) {
+     console.error(e);
     return false;
   }
 };

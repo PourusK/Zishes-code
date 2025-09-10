@@ -9,12 +9,7 @@ const StepIntoZishes = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const complianceBadges = [
-    { label: "18+ KYC", icon: "🔞" },
-    { label: "Skill-Based", icon: "🎯" },
-    { label: "Transparent Fees", icon: "💎" },
-    { label: "India GST/TDS", icon: "🇮🇳" },
-  ];
+  
 
   return (
     <section ref={containerRef} className="relative overflow-hidden ">

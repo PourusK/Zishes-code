@@ -9,8 +9,8 @@ declare module 'three/examples/jsm/loaders/GLTFLoader' {
     animations: THREE.AnimationClip[];
     cameras: THREE.Camera[];
     asset: object;
-    parser: any;
-    userData: any;
+   parser: unknown;
+userData: Record<string, unknown>;
   }
 
   export class GLTFLoader extends Loader {
