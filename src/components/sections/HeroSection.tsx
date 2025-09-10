@@ -334,7 +334,7 @@ const Scene3D: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   ] : [
     {
       path: '/models/airpods.glb',
-      position: [-8, 3, -2] as [number, number, number],
+      position: [-9, 3, -2] as [number, number, number],
       scale: 1.3,
       delay: 0
     },

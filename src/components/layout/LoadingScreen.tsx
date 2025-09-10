@@ -25,33 +25,27 @@ export default function LoadingScreen() {
     };
   }, []);
 
-  // Simplified variants without transition conflicts
-  const containerVariants = {
-    visible: { opacity: 1 },
-    exit: { opacity: 0 }
-  };
-
-  const logoVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: { scale: 1, opacity: 1 }
-  };
-
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
           initial={{ opacity: 1 }}
-          animate="visible"
-          exit="exit"
-          variants={containerVariants}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
           className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
         >
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={logoVariants}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ scale: 1.2, opacity: 0 }}
+            animate={{ 
+              scale: 1,
+              opacity: 1,
+              transition: { duration: 0.5, ease: "easeOut" }
+            }}
+            exit={{
+              scale: 0.8,
+              opacity: 0,
+              transition: { duration: 0.7, ease: "easeInOut" }
+            }}
           >
             <Image 
               src="/img/logo.png" 

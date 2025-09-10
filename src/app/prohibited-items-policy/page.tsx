@@ -29,7 +29,7 @@ const ProhibitedItemsPolicy = () => {
         </div>
         <div className="mt-10">
           <Link
-            href="/"
+            href="/#footer"
             className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-lg font-medium shadow-md transition"
           >
             ← Back to Home

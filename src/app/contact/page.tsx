@@ -99,7 +99,7 @@ const Contact = () => {
         </form>
         <div className="mt-10">
           <Link
-            href="/"
+            href="/#footer"
             className="inline-block text-white bg-gray-600 hover:bg-gray-700 px-5 py-2.5 rounded-lg font-medium shadow-md transition"
           >
             ← Back to Home
