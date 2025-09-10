@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: " Zishes  ",
-  description: "",
+  description: "No haggling, no spam,just skill",
 
   // Basic SEO
   keywords: [
@@ -21,9 +21,8 @@ export const metadata: Metadata = {
 
   // Icons
   icons: {
-    icon: "/images/logo.png",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/img/logo.png",
+   
   },
 
   
