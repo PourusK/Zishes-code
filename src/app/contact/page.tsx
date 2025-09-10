@@ -59,7 +59,7 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
             placeholder="Your Name"
-            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+            className="w-full px-4 py-2 rounded-lg bg-black text-white focus:outline-none"
             required
           />
           <input
@@ -68,14 +68,14 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
             placeholder="Your Email"
-            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+            className="w-full px-4 py-2 rounded-lg bg-black text-white focus:outline-none"
             required
           />
           <select
             name="subject"
             value={form.subject}
             onChange={handleChange}
-            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+            className="w-full px-4 py-2 rounded-lg bg-black text-white focus:outline-none"
           >
             <option value="Feedback">Feedback</option>
             <option value="Report Issue">Report Issue</option>
@@ -87,7 +87,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Write your message..."
             rows={4}
-            className="w-full px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none"
+            className="w-full px-4 py-2 rounded-lg bg-black text-white focus:outline-none"
             required
           ></textarea>
           <button
