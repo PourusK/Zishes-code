@@ -33,7 +33,7 @@ const Footer = () => {
       : legalPolicies;
 
   return (
-    <footer className="z-100 text-white mt-20 px-2">
+    <footer className="z-40 text-white mt-20 px-2">
       <div className="mx-auto py-12 px-4 sm:px-6 lg:px-8 z-100">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 z-100">
           {/* Logo Section */}
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           {/* Legal & Policies */}
-          <div className="col-span-1 z-100 md:ml-10">
+          <div className="col-span-1 z-40 md:ml-10">
             <h3 className="text-sm font-semibold uppercase tracking-wider">Legal & Policies</h3>
             <ul className="mt-4 space-y-2">
               {visiblePolicies.map((item) => (
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
 
           {/* Support & Community */}
-          <div className="col-span-1 z-100">
+          <div className="col-span-1 z-40">
             <h3 className="text-sm font-semibold uppercase tracking-wider">Support & Community</h3>
             <ul className="mt-4 space-y-2">
               {supportLinks.map((item) => (

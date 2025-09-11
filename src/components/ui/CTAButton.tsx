@@ -8,9 +8,9 @@ import useOnClickOutside from "@/hooks/useOnClickOutside";
 import useInitialLoad from "@/contexts/initial-load-context";
 
 const navItems = [
-  { title: "Home", href: "#home" },
-  { title: "How It Works", href: "#how-it-works" },
-  { title: "Testimonials", href: "#testimonials" },
+  { title: "Home", href: "/#home" },
+  { title: "How It Works", href: "/#how-it-works" },
+  { title: "Testimonials", href: "/#testimonials" },
 ];
 
 export default function CTAButton() {
@@ -38,7 +38,7 @@ export default function CTAButton() {
     >
       {/* === Logo === */}
       <Link
-        href="#home"
+        href="/#home"
         className="relative h-[70px] w-[70px] md:h-[70px] md:w-[70px]"
       >
         <Image src="/img/logo.png" alt="App Logo" fill className="object-cover overflow-visible" />
