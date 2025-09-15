@@ -31,7 +31,7 @@ const Contact = () => {
           subject: form.subject,
           message: form.message,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        "Cel7dUgjZEvg2WSC3" // Replace with your EmailJS public key
       )
       .then(
         (response) => {
