@@ -40,7 +40,7 @@ const Terms = () => {
   </h2>
   <p>
     You must be at least 18 years old (or the age of majority in your
-    jurisdiction, if higher) to create an account. Identity checks (KYC/AML) may
+    jurisdiction, if higher) to create an account. Identity checks (KYC/AML) will
     be required. You may not use Zishes if prohibited by law or by sanctions.
   </p>
 
@@ -69,7 +69,7 @@ const Terms = () => {
   </h2>
   <p>
     You authorize Zishes to charge applicable fees and taxes. Sellers authorize
-    Zishes to deduct its 15% platform fee plus applicable taxes and any
+    Zishes to deduct its 20% platform fee plus applicable taxes and any
     required withholding (e.g., India TCS) from payouts.
   </p>
 
