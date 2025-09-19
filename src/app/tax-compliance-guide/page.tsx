@@ -111,7 +111,7 @@ const TaxComplianceGuide = () => {
                     memberships/coin packs.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
-                    Sellers must register if >CAD 30k/year sales.
+                    Sellers must register if {">"}CAD 30k/year sales.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
                     GST/HST applies to platform fee.
@@ -125,7 +125,7 @@ const TaxComplianceGuide = () => {
                     10% GST on memberships/coin packs.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
-                    Sellers must charge GST if annual turnover > AUD 75k.
+                    Sellers must charge GST if annual turnover {">"} AUD 75k.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
                     10% GST on platform fee.
@@ -181,7 +181,7 @@ const TaxComplianceGuide = () => {
                     9% GST on memberships/coin packs.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
-                    Seller GST applies if annual turnover > SGD 1M.
+                    Seller GST applies if annual turnover {">"} SGD 1M.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
                     9% GST on platform fee.
@@ -195,7 +195,7 @@ const TaxComplianceGuide = () => {
                     5% VAT on memberships/coin packs.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
-                    Seller VAT applies if annual turnover > AED 375k. TRN
+                    Seller VAT applies if annual turnover {">"} AED 375k. TRN
                     required for compliance.
                   </td>
                   <td className="border border-gray-700 px-4 py-2">
