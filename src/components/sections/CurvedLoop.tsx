@@ -16,7 +16,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
   interactive = true
 }) => {
   // 🔥 Hardcoded text
-  const marqueeText = 'No Spam. No Haggling. Just Skill';
+  const marqueeText = 'Players Win. Sellers Earn. Everyone Wins.';
 
   const text = useMemo(() => {
     const hasTrailing = /\s|\u00A0$/.test(marqueeText);
