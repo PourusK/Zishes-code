@@ -99,12 +99,12 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-sm font-semibold uppercase tracking-wider">Contact Us</h3>
             <ul className="mt-4 space-y-2">
-              <li className="text-gray-300">support@example.com</li>
-              <li className="text-gray-300">+1 (555) 123-4567</li>
+              <li className="text-gray-300">contact@zishes.com</li>
+              <li className="text-gray-300">+971 50 518 7169</li>
               <li className="text-gray-300">
-                123 Business Ave, Suite 100
+                Ajman Free Zone C1 Building 
                 <br />
-                New York, NY 10001
+                Ajman Free Zone, UAE
               </li>
             </ul>
           </div>
@@ -113,7 +113,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
+            &copy; {new Date().getFullYear()} Novazrehh Tech Zolutions F.Z.E. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {/* Social Icons */}
