@@ -38,7 +38,7 @@ export default function LoadingScreen() {
           <motion.div
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{
-            scale: [0.4, 1, 1.6],
+            scale: [0.4, 1.2, 2.6],
               opacity: [0, 1, 0],
               transition: {
                 duration: 1.2,
