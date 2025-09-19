@@ -17,7 +17,7 @@ showRadialGradient?: boolean; // kept for API compatibility (applies a subtle ma
 export const AuroraBackground = ({
 className,
 children,
-showRadialGradient = true,
+showRadialGradient = false,
 ...props
 }: AuroraBackgroundProps) => {
 return (
