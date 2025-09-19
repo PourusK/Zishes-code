@@ -36,24 +36,21 @@ export default function LoadingScreen() {
         >
           {/* Logo animation */}
           <motion.div
-            // Start bigger and transparent
-            initial={{ scale: 2, opacity: 0 }}
-            // Shrink to normal and fade in
+            initial={{ scale: 0.4, opacity: 0 }}
             animate={{
-    scale: 0, // goes through 1 briefly if you want a visible moment
-    opacity: [0, 1, 0], // fade in then fade out as it shrinks
-    transition: {
-      duration: 1.2,
-      ease: "easeInOut",
-      times: [0, 0.1, 1], // controls timing between 2→1→0
-    },
-  }}
-            // On exit, shrink and fade out
-           exit={{
-    scale: 0,
-    opacity: 0,
-    transition: { duration: 0.5, ease: "easeInOut" },
-  }}
+            scale: [0.4, 1, 1.6],
+              opacity: [0, 1, 0],
+              transition: {
+                duration: 1.2,
+                ease: "easeInOut",
+                times: [0, 0.35, 1],
+              },
+            }}
+            exit={{
+              scale: 2.6,
+              opacity: 0,
+              transition: { duration: 0.4, ease: "easeInOut" },
+            }}
           >
             <Image
               src="/img/logo.png"
