@@ -58,7 +58,7 @@ const Terms = () => {
     Memberships, Credits & Coins
   </h2>
   <p>
-    In India, Zishes operates as a membership service: Members pay a monthly fee
+    In India, Zishes operates as a membership service with bundled benefits: Members pay a monthly fee
     (subject to GST) and receive bundled ZC. ZC cannot be purchased separately
     and expire at the end of each billing cycle unless limited rollover is
     offered. In other markets, ZC may be purchased directly (subject to VAT/GST).
