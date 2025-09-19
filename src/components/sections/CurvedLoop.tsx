@@ -11,7 +11,7 @@ interface CurvedLoopProps {
 const CurvedLoop: FC<CurvedLoopProps> = ({
   speed = 2,
   className,
-  curveAmount = 400,
+  curveAmount = 0,
   direction = 'left',
   interactive = true
 }) => {
