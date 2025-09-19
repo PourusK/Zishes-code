@@ -3,12 +3,12 @@ import { useState } from "react";
 import Link from "next/link";
 
 const faqs = [
-  {,
+  {
     question: "What is Zishes?",
     answer:
       "Zishes is a prize competition marketplace where sellers upload items as prizes, and players compete in quick skill-based games to win them. No luck, no lotteries — just skill.",
   },
-  {,
+  {
     question: "How do I participate in a tournament?",
     answer:
       "Simply download the Zishes app, browse available prizes, and enter a tournament by paying the entry fee with coins. Play the skill game — the fastest valid player wins.",
