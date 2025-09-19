@@ -6,24 +6,22 @@ const faqs = [
   {,
     question: "What is Zishes?",
     answer:
-      "Click on the signup button and fill in your details to create an account instantly.",
       "Zishes is a prize competition marketplace where sellers upload items as prizes, and players compete in quick skill-based games to win them. No luck, no lotteries — just skill.",
   },
   {,
     question: "How do I participate in a tournament?",
     answer:
-      "Yes, orders can be cancelled within 24 hours if they have not been shipped.",
       "Simply download the Zishes app, browse available prizes, and enter a tournament by paying the entry fee with coins. Play the skill game — the fastest valid player wins.",
   },
   {
     question: "What are “coins” on Zishes?",
     answer:
-      "Delivery typically takes 3-7 business days depending on your location.",
       "Coins are your entry tokens for competitions. You can purchase them in-app securely and use them to join tournaments.",
   },
   {
     question: "What payment methods are accepted?",
-    answer: "We accept credit/debit cards, UPI, and net banking.",
+    answer: 
+      "We accept credit/debit cards, UPI, and net banking.",
     },
   {
     question: "Is Zishes legal?",
