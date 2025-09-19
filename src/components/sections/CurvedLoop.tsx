@@ -9,7 +9,7 @@ interface CurvedLoopProps {
 }
 
 const CurvedLoop: FC<CurvedLoopProps> = ({
-  speed = 2,
+  speed = 1,
   className,
   curveAmount = 0,
   direction = 'left',
